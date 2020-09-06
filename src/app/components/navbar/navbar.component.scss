@@ -1,17 +1,25 @@
-.sidenav-container {
+:host .sidenav-container {
   height: 100%;
 }
 
-.sidenav {
-  width: 200px;
+:host .sidenav {
+  width: 300px;
 }
 
-.sidenav .mat-toolbar {
+:host .sidenav .mat-toolbar {
   background: inherit;
 }
 
-.mat-toolbar.mat-primary {
+:host .mat-toolbar.mat-primary {
   position: sticky;
   top: 0;
   z-index: 1;
+}
+
+:host #title {
+  margin-left: 50px;
+}
+
+:host #sidenav-link-name {
+  margin-left: 20px;
 }

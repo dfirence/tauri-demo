@@ -10,12 +10,21 @@ import { map, shareReplay } from 'rxjs/operators';
 })
 export class NavbarComponent {
 
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Large)
     .pipe(
       map(result => result.matches),
       shareReplay()
     );
 
+  app = {
+    title: "Tauri Angular Demo",
+    sidenav_title: "SideMenu Options",
+    sidenavLinks: [
+      "One",
+      "Two",
+      "Three"
+    ]
+  }
   constructor(private breakpointObserver: BreakpointObserver) {}
 
 }
